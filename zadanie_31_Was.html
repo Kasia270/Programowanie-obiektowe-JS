@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript">
+var spodnie = {
+    rodzaj: 'Materiałowe',
+    marka: 'Newyorker',
+    kolor: 'czarne',
+    spodnie_wyswietl_wasilewska: function () {
+        document.write(this.rodzaj + ' ' + this.marka + ' ' + this.kolor + '<br>');
+    }
+};
+spodnie.rozmiar = 'M';
 
+spodnie.spodnie_pokaz_wasilewska = function () {
+    alert('Rozmiar spodni: ' + this.rozmiar);
+};
+
+function pokazInformacje() {
+    document.write('<b>Nazwa obiektu:</b> spodnie<br>');
+    document.write('<b>Pola:</b> rodzaj, marka, kolor<br>');
+    document.write('<b>Metoda:</b> spodnie_wyswietl_wasilewska()<br>');
+    document.write('<b>Nowe pole:</b> rozmiar<br>');
+    document.write('<b>Nowa metoda:</b> spodnie_pokaz_wasilewska()<br><br>');
+    spodnie.spodnie_wyswietl_wasilewska();
+}
+</script>
+</head>
+<body>
+
+<button onclick="pokazInformacje()">Pokaż dane obiektu</button>
+<button onclick="spodnie.spodnie_pokaz_wasilewska()">Pokaż nową właściwość</button>
+
+</body>
+</html>
